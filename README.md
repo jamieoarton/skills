@@ -4,32 +4,34 @@ Personal productivity and automation skills for Claude Code and other AI systems
 
 ## Overview
 
-This plugin provides **63 skills** across five categories:
+This marketplace provides **63 skills** organized into **6 modular plugins**. Install only what you need, or install all for the complete toolkit.
 
-**Workflow & Collaboration** (15 - Superpowers)
+### Available Plugins
+
+**jamie-skills-superpowers** (14 skills - from obra/superpowers)
 - Test-driven development, systematic debugging, code review
 - Planning, execution, and parallel agent coordination
 - Git workflows and branch management
 
-**Marketing & Growth** (29 - Corey Haines)
+**jamie-skills-marketing** (29 skills - from coreyhaines31/marketingskills)
 - Conversion optimization (CRO), copywriting, email marketing
 - SEO, programmatic content, paid advertising
 - Pricing strategy, launch planning, referral programs
 - Marketing psychology, analytics, A/B testing
 
-**Business Systems** (5 - Work The System methodology)
-- Process documentation and systems thinking
-- Strategic planning and operating principles
-
-**BramClaw MCP Integrations** (6)
+**jamie-skills-bramclaw** (6 skills)
 - ClickUp, Gmail, Obsidian, Supabase, GitHub automation
 - Delegated operations and multi-account support
 
-**Development Tools** (7)
+**jamie-skills-business** (5 skills - Work The System methodology)
+- Process documentation and systems thinking
+- Strategic planning and operating principles
+
+**jamie-skills-dev-tools** (8 skills)
 - Agent creation and skill building frameworks
 - Cursor IDE utilities
 
-**Examples** (1)
+**jamie-skills-examples** (1 skill)
 - Reference implementations
 
 See [CREDITS.md](CREDITS.md) for attribution and sources.
@@ -38,12 +40,39 @@ See [CREDITS.md](CREDITS.md) for attribution and sources.
 
 ### Claude Code
 
+**Step 1: Add the marketplace** (one time)
 ```bash
-# Add marketplace
 /plugin marketplace add jamieoarton/skills
+```
 
-# Install plugin
-/plugin install jamie-skills@jamieoarton
+**Step 2: Install plugins** (choose what you need)
+```bash
+# Workflow & Collaboration (14 skills)
+/plugin install jamie-skills-superpowers@jamieoarton
+
+# Marketing & Growth (29 skills)
+/plugin install jamie-skills-marketing@jamieoarton
+
+# BramClaw MCP Integrations (6 skills)
+/plugin install jamie-skills-bramclaw@jamieoarton
+
+# Business Systems (5 skills)
+/plugin install jamie-skills-business@jamieoarton
+
+# Development Tools (8 skills)
+/plugin install jamie-skills-dev-tools@jamieoarton
+
+# Examples (1 skill)
+/plugin install jamie-skills-examples@jamieoarton
+```
+
+**Or install all plugins at once**:
+```bash
+/plugin install jamie-skills-superpowers@jamieoarton && \
+  /plugin install jamie-skills-marketing@jamieoarton && \
+  /plugin install jamie-skills-bramclaw@jamieoarton && \
+  /plugin install jamie-skills-business@jamieoarton && \
+  /plugin install jamie-skills-dev-tools@jamieoarton
 ```
 
 ### Other AI Systems (Codex, Gemini, etc.)
@@ -121,17 +150,28 @@ For detailed descriptions, see individual skill SKILL.md files.
 
 ### Claude Code
 
-Skills are automatically namespaced as `/jamie-skills:skill-name`:
+Skills are automatically namespaced by plugin name:
 
 ```bash
-# Example: Fetch YouTube transcript
-/jamie-skills:fetch-youtube-transcript https://youtube.com/watch?v=...
+# Superpowers skills
+/jamie-skills-superpowers:brainstorming
+/jamie-skills-superpowers:test-driven-development
 
-# Example: Create strategic objective
-/jamie-skills:strategic-objective-creation
+# Marketing skills
+/jamie-skills-marketing:page-cro
+/jamie-skills-marketing:copywriting
 
-# Example: Create BramClaw agent
-/jamie-skills:bramclaw-agent-creation
+# BramClaw MCP skills
+/jamie-skills-bramclaw:bramclaw-clickup
+/jamie-skills-bramclaw:bramclaw-gmail
+
+# Business skills
+/jamie-skills-business:strategic-objective-creation
+/jamie-skills-business:fetch-youtube-transcript
+
+# Dev Tools skills
+/jamie-skills-dev-tools:skill-building-complete
+/jamie-skills-dev-tools:bramclaw-agent-creation
 ```
 
 ### Other AI Systems
@@ -147,16 +187,26 @@ AI: [automatically triggers strategic-objective-creation skill]
 
 ### Claude Code
 
-Plugin updates automatically when new versions are released. Check installed version:
+Plugins update automatically when new versions are released. Check installed plugins:
 
 ```bash
 /plugin list
 ```
 
-Force update:
+Force update specific plugins:
 
 ```bash
-/plugin update jamie-skills@jamieoarton
+# Update individual plugins
+/plugin update jamie-skills-superpowers@jamieoarton
+/plugin update jamie-skills-marketing@jamieoarton
+/plugin update jamie-skills-bramclaw@jamieoarton
+
+# Or update all at once
+/plugin update jamie-skills-superpowers@jamieoarton && \
+  /plugin update jamie-skills-marketing@jamieoarton && \
+  /plugin update jamie-skills-bramclaw@jamieoarton && \
+  /plugin update jamie-skills-business@jamieoarton && \
+  /plugin update jamie-skills-dev-tools@jamieoarton
 ```
 
 ### Other AI Systems

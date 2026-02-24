@@ -5,6 +5,73 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-02-24
+
+### Changed
+
+**BREAKING: Restructured as Multi-Plugin Marketplace**
+
+Split single monolithic plugin into 6 modular plugins for better organization and selective installation:
+
+- **jamie-skills-superpowers** (14 skills) - Workflow excellence from obra/superpowers
+- **jamie-skills-marketing** (29 skills) - Marketing & growth from coreyhaines31/marketingskills
+- **jamie-skills-bramclaw** (6 skills) - BramClaw MCP integrations
+- **jamie-skills-business** (5 skills) - Work The System methodology
+- **jamie-skills-dev-tools** (8 skills) - Development tools and utilities
+- **jamie-skills-examples** (1 skill) - Reference implementations
+
+**Benefits**:
+- Install only the plugins you need
+- Clearer organization by purpose and upstream source
+- Same marketplace, modular consumption
+- All 63 skills still available
+
+### Added
+
+**Superpowers Git Subtree Integration**
+- Migrated Superpowers from manual copy to git subtree
+- Can now pull upstream updates from obra/superpowers
+- Pulled latest upstream improvements (7 skills enhanced)
+- Consistent git subtree approach for both external sources
+
+**Upstream Skill Improvements** (from obra/superpowers):
+- `brainstorming`: Added hard gate, checklist, process flow
+- `executing-plans`, `writing-plans`: Enhanced workflows
+- `using-git-worktrees`, `using-superpowers`: Updated guidance
+- `subagent-driven-development`, `writing-skills`: Various improvements
+
+### Fixed
+
+- Corrected skill attribution: `skill-creator` is our own (not from Superpowers)
+- Superpowers skill count: 14 (not 15)
+
+### Documentation
+
+- Updated README with multi-plugin installation instructions
+- Updated UPSTREAM-UPDATES.md with Superpowers git subtree workflow
+- Updated CREDITS.md with git subtree integration method
+
+### Migration Guide
+
+**For existing users**:
+
+Old installation (v1.x):
+```bash
+/plugin install jamie-skills@jamieoarton
+```
+
+New installation (v2.x):
+```bash
+# Install plugins you need
+/plugin install jamie-skills-superpowers@jamieoarton
+/plugin install jamie-skills-marketing@jamieoarton
+# ... etc
+```
+
+Skills remain unchanged - only installation method has changed.
+
+---
+
 ## [1.2.0] - 2026-02-24
 
 ### Added
