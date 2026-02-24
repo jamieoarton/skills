@@ -1,16 +1,55 @@
 {
-  "name": "jamieoarton",
+  "name": "jamieoarton-skills",
   "owner": {
     "name": "Jamie Oarton",
     "email": "jamie@bramforth.ai"
   },
+  "metadata": {
+    "description": "Personal productivity and automation skills including Work The System methodology, BramClaw MCP integrations, Superpowers workflows, and development tools",
+    "version": "1.1.1"
+  },
   "plugins": [
     {
       "name": "jamie-skills",
-      "source": {
-        "source": "github",
-        "repo": "jamieoarton/skills"
-      }
+      "description": "Unified collection of 34 skills: Superpowers workflows (15), BramClaw MCP integrations (6), Business systems (5), Development tools (7), and example skills (1)",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/brainstorming",
+        "./skills/bramclaw-agent-creation",
+        "./skills/bramclaw-clickup",
+        "./skills/bramclaw-github",
+        "./skills/bramclaw-gmail",
+        "./skills/bramclaw-gmail-delegated-send",
+        "./skills/bramclaw-obsidian",
+        "./skills/bramclaw-supabase",
+        "./skills/create-rule",
+        "./skills/create-skill",
+        "./skills/create-subagent",
+        "./skills/dispatching-parallel-agents",
+        "./skills/executing-plans",
+        "./skills/fetch-youtube-transcript",
+        "./skills/finishing-a-development-branch",
+        "./skills/global_example_skill",
+        "./skills/migrate-to-skills",
+        "./skills/operating-principles-development",
+        "./skills/receiving-code-review",
+        "./skills/requesting-code-review",
+        "./skills/skill-building-complete",
+        "./skills/skill-creator",
+        "./skills/strategic-objective-creation",
+        "./skills/subagent-driven-development",
+        "./skills/systematic-debugging",
+        "./skills/test-driven-development",
+        "./skills/update-cursor-settings",
+        "./skills/using-git-worktrees",
+        "./skills/using-superpowers",
+        "./skills/verification-before-completion",
+        "./skills/work-the-system-mindset",
+        "./skills/working-procedures-documentation",
+        "./skills/writing-plans",
+        "./skills/writing-skills"
+      ]
     }
   ]
 }
