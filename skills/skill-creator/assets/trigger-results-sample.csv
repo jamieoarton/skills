@@ -1,0 +1,7 @@
+expected,actual
+should_trigger,trigger
+should_trigger,true
+should_not_trigger,false
+should_not_trigger,skip
+should_trigger,trigger
+should_not_trigger,false

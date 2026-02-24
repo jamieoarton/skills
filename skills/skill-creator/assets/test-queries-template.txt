@@ -1,0 +1,221 @@
+# Test Queries Template
+
+**Purpose:** Systematically test skill triggering accuracy with positive and negative test cases.
+
+**Format:** Each line is either a test query OR a comment (starts with #)
+- SHOULD_TRIGGER | [query text that should activate your skill]
+- SHOULD_NOT_TRIGGER | [query text that should NOT activate your skill]
+
+**Target:** 90%+ triggering accuracy (correct activation on SHOULD_TRIGGER, correct skip on SHOULD_NOT_TRIGGER)
+
+---
+
+## How to Use This Template
+
+1. **Copy this template** for your specific skill
+2. **Customize the SHOULD_TRIGGER examples** - Add 8-12 queries that should activate your skill
+   - Include direct requests ("Do X")
+   - Include implicit requests ("I need to Y")
+   - Include domain-specific phrasing your users would say
+   - Include edge cases (abbreviated terms, misspellings if common)
+3. **Customize the SHOULD_NOT_TRIGGER examples** - Add 8-12 queries that should NOT activate
+   - Include similar domain but wrong skill (e.g., "debug code" when skill is "review code")
+   - Include unrelated requests
+   - Include ambiguous queries (could be multiple skills, yours shouldn't dominate)
+4. **Run the test** - Paste each query into Claude and observe which skill (if any) triggers
+5. **Calculate accuracy** - % of SHOULD_TRIGGER that triggered + % of SHOULD_NOT_TRIGGER that didn't trigger / total queries
+6. **Iterate on description** if accuracy < 90%
+
+---
+
+## Template Section: SHOULD_TRIGGER
+
+# These queries SHOULD activate your skill
+# Customize these examples for your specific skill domain
+
+SHOULD_TRIGGER | [Direct request using skill name/domain]
+SHOULD_TRIGGER | [Implicit request describing outcome user wants]
+SHOULD_TRIGGER | [Request using domain-specific terminology]
+SHOULD_TRIGGER | [Request with context that implies this skill]
+SHOULD_TRIGGER | [Abbreviated/casual phrasing users might use]
+SHOULD_TRIGGER | [Request combining multiple aspects of skill]
+SHOULD_TRIGGER | [Edge case: Slightly ambiguous but should match]
+SHOULD_TRIGGER | [Edge case: Different phrasing, same intent]
+SHOULD_TRIGGER | [User asks "how do I" version]
+SHOULD_TRIGGER | [User asks "can you" version]
+SHOULD_TRIGGER | [User asks "help me" version]
+SHOULD_TRIGGER | [Question form instead of command]
+
+---
+
+## Template Section: SHOULD_NOT_TRIGGER
+
+# These queries should NOT activate your skill
+# They test that skill doesn't trigger on irrelevant/wrong queries
+
+SHOULD_NOT_TRIGGER | [Completely unrelated request]
+SHOULD_NOT_TRIGGER | [Similar domain but different skill needed]
+SHOULD_NOT_TRIGGER | [Same tool/MCP but different workflow]
+SHOULD_NOT_TRIGGER | [Opposite intent (e.g., "delete" when skill "creates")]
+SHOULD_NOT_TRIGGER | [General question not requiring this skill]
+SHOULD_NOT_TRIGGER | [Request for different tool/platform]
+SHOULD_NOT_TRIGGER | [Ambiguous query that's too generic]
+SHOULD_NOT_TRIGGER | [Clearly human conversation, not task]
+SHOULD_NOT_TRIGGER | [Request that's built-in functionality, not skill-worthy]
+SHOULD_NOT_TRIGGER | [Edge case: Mentions domain but wrong action]
+
+---
+
+## Example: Linear Sprint Planning Skill
+
+This example shows how to customize the template for a specific skill.
+
+### SHOULD_TRIGGER (Linear Sprint Planning)
+
+SHOULD_TRIGGER | Plan next sprint based on our velocity
+SHOULD_TRIGGER | Create a new sprint for the engineering team
+SHOULD_TRIGGER | What should we include in the next sprint?
+SHOULD_TRIGGER | Calculate sprint capacity from historical data
+SHOULD_TRIGGER | Set up sprint with recommended scope
+SHOULD_TRIGGER | Analyze our sprint velocity and plan accordingly
+SHOULD_TRIGGER | Help me plan sprint 24
+SHOULD_TRIGGER | Create Linear sprint based on team capacity
+SHOULD_TRIGGER | What's our velocity? Plan the next iteration
+SHOULD_TRIGGER | Recommend backlog items for next sprint
+SHOULD_TRIGGER | Can you plan our next two-week sprint?
+SHOULD_TRIGGER | I need to create a sprint with optimal capacity
+
+### SHOULD_NOT_TRIGGER (Linear Sprint Planning)
+
+SHOULD_NOT_TRIGGER | Show me all issues in Linear
+SHOULD_NOT_TRIGGER | Create a new issue in the backlog
+SHOULD_NOT_TRIGGER | Update sprint dates
+SHOULD_NOT_TRIGGER | Who's working on what this sprint?
+SHOULD_NOT_TRIGGER | Close completed issues
+SHOULD_NOT_TRIGGER | Plan my personal tasks for the week
+SHOULD_NOT_TRIGGER | Create Jira sprint (different tool)
+SHOULD_NOT_TRIGGER | What's the weather like?
+SHOULD_NOT_TRIGGER | Delete old sprints
+SHOULD_NOT_TRIGGER | Assign this issue to Sarah
+SHOULD_NOT_TRIGGER | Generate sprint report (reporting, not planning)
+SHOULD_NOT_TRIGGER | How do I use Linear? (documentation question)
+
+### Test Results Example
+
+```
+Total queries: 24 (12 SHOULD_TRIGGER + 12 SHOULD_NOT_TRIGGER)
+
+SHOULD_TRIGGER results:
+✅ 11 correctly triggered
+❌ 1 failed to trigger ("What's our velocity? Plan the next iteration" - too ambiguous)
+
+SHOULD_NOT_TRIGGER results:
+✅ 11 correctly skipped
+❌ 1 incorrectly triggered ("Update sprint dates" - too similar to sprint planning)
+
+Accuracy: (11 + 11) / 24 = 91.7% ✅ Meets 90% target
+
+Actions:
+- Refine description to be more specific about "planning" vs. "managing" sprints
+- Add trigger keywords: "plan", "create", "capacity", "velocity"
+- Exclude keywords: "update", "report", "assign" (separate skills)
+```
+
+---
+
+## Example: Multi-MCP Design Handoff Skill
+
+### SHOULD_TRIGGER (Design Handoff)
+
+SHOULD_TRIGGER | Hand off the checkout flow designs to engineering
+SHOULD_TRIGGER | Export Figma designs and create Linear tasks
+SHOULD_TRIGGER | Create design handoff for the dashboard redesign
+SHOULD_TRIGGER | Send designs from Figma to the dev team
+SHOULD_TRIGGER | Set up engineering tasks from these mockups
+SHOULD_TRIGGER | Complete design handoff workflow
+SHOULD_TRIGGER | Get designs into Linear with Drive links
+SHOULD_TRIGGER | Handoff these screens to frontend team
+SHOULD_TRIGGER | Create implementation tasks from Figma
+SHOULD_TRIGGER | Export designs and notify team
+SHOULD_TRIGGER | Process design handoff for mobile app
+SHOULD_TRIGGER | Can you hand off the login screen designs?
+
+### SHOULD_NOT_TRIGGER (Design Handoff)
+
+SHOULD_NOT_TRIGGER | Show me the Figma file
+SHOULD_NOT_TRIGGER | Create a new design in Figma
+SHOULD_NOT_TRIGGER | Update design system components
+SHOULD_NOT_TRIGGER | Review this design for accessibility
+SHOULD_NOT_TRIGGER | Export designs only (no task creation)
+SHOULD_NOT_TRIGGER | Create Linear tasks manually
+SHOULD_NOT_TRIGGER | Upload file to Google Drive
+SHOULD_NOT_TRIGGER | What's the design status?
+SHOULD_NOT_TRIGGER | Implement this design (coding task, not handoff)
+SHOULD_NOT_TRIGGER | Share Figma link with team (simple share)
+SHOULD_NOT_TRIGGER | Archive old designs
+SHOULD_NOT_TRIGGER | Sketch handoff (different design tool)
+
+---
+
+## Iteration Tips
+
+### If accuracy < 90%:
+
+**Problem:** Too many false positives (triggers when it shouldn't)
+**Solution:** Make description more specific
+- Add exclusions: "Use when [X], NOT for [Y]"
+- Narrow domain: Be specific about what actions the skill performs
+- Add qualifying context: "Use when user needs to [specific workflow]"
+
+**Problem:** Too many false negatives (doesn't trigger when it should)
+**Solution:** Make description broader or add trigger keywords
+- Include common phrasings users might use
+- Add domain terminology to description
+- Cover both direct ("create sprint") and implicit ("what should we build?") requests
+
+**Problem:** Conflicts with other skills
+**Solution:** Coordinate descriptions to have clear boundaries
+- Your skill: "Use for sprint PLANNING (creating new sprints)"
+- Other skill: "Use for sprint REPORTING (analyzing completed sprints)"
+- Clear distinction prevents overlap
+
+### Testing Cadence
+
+- **Initial development:** Test every description change
+- **After launch:** Test monthly with real user queries
+- **After major changes:** Re-test full suite
+
+### Real User Queries
+
+After skill is deployed, collect actual user queries that should have triggered but didn't:
+- Add them to SHOULD_TRIGGER section
+- Re-test and iterate description
+- Builds real-world triggering accuracy
+
+---
+
+## Quick Reference
+
+**Minimum test suite:**
+- 8 SHOULD_TRIGGER queries
+- 8 SHOULD_NOT_TRIGGER queries
+- Target: 90%+ accuracy (14/16 correct)
+
+**Recommended test suite:**
+- 12 SHOULD_TRIGGER queries
+- 12 SHOULD_NOT_TRIGGER queries
+- Target: 90%+ accuracy (22/24 correct)
+
+**Comprehensive test suite:**
+- 20 SHOULD_TRIGGER queries
+- 20 SHOULD_NOT_TRIGGER queries
+- Target: 95%+ accuracy (38/40 correct)
+
+**File naming convention:**
+- `test-queries-[skill-name].txt`
+- Example: `test-queries-linear-sprint-planner.txt`
+
+**Referenced by:**
+- `SKILL.md` - Step 7 (Test triggering)
+- `success-metrics-framework.md` - Triggering accuracy measurement
+- `troubleshooting-guide.md` - Debugging triggering issues

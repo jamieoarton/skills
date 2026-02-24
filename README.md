@@ -4,7 +4,12 @@ Personal productivity and automation skills for Claude Code and other AI systems
 
 ## Overview
 
-This plugin provides 13 skills across three categories:
+This plugin provides **34 skills** across four categories:
+
+**Workflow & Collaboration** (Superpowers)
+- Test-driven development, systematic debugging, code review
+- Planning, execution, and parallel agent coordination
+- Git workflows and branch management
 
 **Business Systems** (Work The System methodology)
 - Process documentation and systems thinking
@@ -16,6 +21,9 @@ This plugin provides 13 skills across three categories:
 
 **Development Tools**
 - Agent creation and skill building frameworks
+- Cursor IDE utilities
+
+See [CREDITS.md](CREDITS.md) for attribution and sources.
 
 ## Installation
 
@@ -44,50 +52,61 @@ ln -s ~/git/skills/skills ~/.gemini/skills
 
 ## Skills Included
 
+### Workflow & Collaboration (Superpowers)
+
+**Testing & Quality**
+- `test-driven-development` - TDD methodology
+- `systematic-debugging` - Structured debugging
+- `verification-before-completion` - Pre-completion checks
+
+**Planning & Execution**
+- `brainstorming` - Creative exploration
+- `writing-plans` - Multi-step planning
+- `executing-plans` - Plan execution
+- `dispatching-parallel-agents` - Concurrent coordination
+- `subagent-driven-development` - Independent tasks
+
+**Code Review**
+- `requesting-code-review` - Submit for review
+- `receiving-code-review` - Process feedback
+
+**Git Workflows**
+- `using-git-worktrees` - Isolated workspaces
+- `finishing-a-development-branch` - Branch completion
+
+**Meta-Skills**
+- `using-superpowers` - Skill system introduction
+- `writing-skills` - Skill creation
+- `skill-creator` - Skill toolkit
+
 ### Business & Productivity
 
-**`fetch-youtube-transcript`**
-Download and extract YouTube video transcripts for analysis.
-
-**`work-the-system-mindset`**
-Apply systems thinking methodology to business challenges. Use when feeling overwhelmed, reactive, or unable to identify root causes.
-
-**`strategic-objective-creation`**
-Create concrete strategic objectives with measurable outcomes. Use when organization lacks clear direction or has conflicting priorities.
-
-**`operating-principles-development`**
-Develop decision-making principles and values frameworks. Use when decisions lack consistency across team members.
-
-**`working-procedures-documentation`**
-Document repeatable procedures to reduce training time and execution inconsistency. Use when same problems recur or quality varies.
+- `fetch-youtube-transcript` - YouTube transcript extraction
+- `work-the-system-mindset` - Systems thinking framework
+- `strategic-objective-creation` - Strategic planning
+- `operating-principles-development` - Decision principles
+- `working-procedures-documentation` - Process documentation
 
 ### BramClaw MCP Skills
 
-**`bramclaw-clickup`**
-ClickUp task management via API. Read/write tasks, lists, workspaces with authorization governance.
-
-**`bramclaw-gmail`**
-Gmail operations (read messages, search, mark read). Separate from delegated-send for security.
-
-**`bramclaw-gmail-delegated-send`**
-Send emails on behalf of principal with explicit confirmation workflow.
-
-**`bramclaw-obsidian`**
-Obsidian vault management via Google Drive API. Read/write notes, search, frontmatter updates.
-
-**`bramclaw-supabase`**
-Supabase database operations with security gates for schema changes.
-
-**`bramclaw-github`**
-GitHub operations (repositories, issues, PRs) with authorization governance.
+- `bramclaw-clickup` - ClickUp task management
+- `bramclaw-gmail` - Gmail read operations
+- `bramclaw-gmail-delegated-send` - Gmail delegated sending
+- `bramclaw-obsidian` - Obsidian vault management
+- `bramclaw-supabase` - Supabase database operations
+- `bramclaw-github` - GitHub operations
 
 ### Development Tools
 
-**`bramclaw-agent-creation`**
-Create new BramClaw OpenClaw agents with complete bootstrap files, authorization governance, and validation checklists.
+- `bramclaw-agent-creation` - BramClaw agent creation framework
+- `skill-building-complete` - Complete skill building toolkit
+- `create-rule` - Cursor rule creation
+- `create-skill` - Cursor skill creation
+- `create-subagent` - Cursor subagent creation
+- `migrate-to-skills` - Migrate to skills system
+- `update-cursor-settings` - Update Cursor config
 
-**`skill-building-complete`**
-Complete skill building framework with MCP integration patterns, success metrics, distribution workflows, and troubleshooting guides.
+For detailed descriptions, see individual skill SKILL.md files.
 
 ## Usage
 

@@ -1,0 +1,5 @@
+scenario,run_type,tokens,tool_calls,api_failures,duration_seconds,notes
+linear-sprint-plan,baseline,12000,18,3,900,manual workflow
+linear-sprint-plan,with_skill,5400,8,0,120,skill-assisted workflow
+multi-mcp-handoff,baseline,15000,24,4,1100,manual coordination
+multi-mcp-handoff,with_skill,7000,11,0,210,skill-assisted coordination
