@@ -5,6 +5,47 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-02-24
+
+### Added
+
+**Marketing & Growth Skills Integration (29 skills)**
+- Integrated via git subtree from https://github.com/jamieoarton/marketingskills
+- Original by Corey Haines (coreyhaines31/marketingskills)
+- Can pull upstream updates while maintaining in unified repo
+
+**CRO Skills (6)**:
+- page-cro, signup-flow-cro, onboarding-cro, form-cro, popup-cro, paywall-upgrade-cro
+
+**Content & Copy (4)**:
+- copywriting, copy-editing, email-sequence, social-content
+
+**SEO (3)**:
+- seo-audit, programmatic-seo, schema-markup
+
+**Strategy (5)**:
+- marketing-ideas, marketing-psychology, pricing-strategy, launch-strategy, competitor-alternatives
+
+**Growth Engineering (3)**:
+- free-tool-strategy, referral-program, paid-ads
+
+**Measurement (2)**:
+- analytics-tracking, ab-test-setup
+
+**Additional Marketing Skills (6)**:
+- ad-creative, ai-seo, churn-prevention, cold-email, content-strategy, product-marketing-context
+
+### Changed
+- Total skills: 34 → 63 (+85% growth)
+- Added Marketing & Growth category
+- Updated CREDITS.md with Corey Haines attribution
+- Updated README with expanded skill categories
+
+### Technical
+- Used git subtree for upstream updates
+- Marketing skills at `skills-external/marketingskills/` (subtree)
+- Skills copied to main `skills/` directory for consistency
+
 ## [1.1.2] - 2026-02-24
 
 ### Fixed

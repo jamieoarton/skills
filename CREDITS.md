@@ -61,6 +61,68 @@ The following utility skills are from Cursor:
 
 ---
 
+## Marketing Skills (MIT License)
+
+**Source**: https://github.com/coreyhaines31/marketingskills
+**Author**: Corey Haines (https://corey.co)
+**License**: MIT
+**Date Integrated**: 2026-02-24 (via git subtree)
+**Your Fork**: https://github.com/jamieoarton/marketingskills
+
+The following marketing skills are integrated from Corey Haines' excellent marketingskills repository:
+
+### Conversion Optimization (6 skills)
+- `page-cro` - Optimize any marketing page for conversions
+- `signup-flow-cro` - Improve registration and signup flows
+- `onboarding-cro` - Enhance post-signup activation
+- `form-cro` - Optimize lead capture and contact forms
+- `popup-cro` - Create and optimize popups and modals
+- `paywall-upgrade-cro` - In-app paywalls and upgrade screens
+
+### Content & Copy (4 skills)
+- `copywriting` - Write compelling marketing copy
+- `copy-editing` - Edit and polish existing copy
+- `email-sequence` - Build email drip campaigns
+- `social-content` - Create social media content
+
+### SEO & Discovery (3 skills)
+- `seo-audit` - Technical and on-page SEO audits
+- `programmatic-seo` - Build SEO pages at scale
+- `schema-markup` - Add structured data and rich snippets
+
+### Paid & Distribution (1 skill)
+- `paid-ads` - Google, Meta, LinkedIn ad campaigns
+
+### Measurement & Testing (2 skills)
+- `analytics-tracking` - Event tracking and measurement
+- `ab-test-setup` - A/B test planning and implementation
+
+### Growth Engineering (2 skills)
+- `free-tool-strategy` - Marketing tools and calculators
+- `referral-program` - Referral and affiliate programs
+
+### Strategy & Monetization (5 skills)
+- `marketing-ideas` - 140 SaaS marketing strategies
+- `marketing-psychology` - 70+ marketing mental models
+- `pricing-strategy` - Pricing, packaging, monetization
+- `launch-strategy` - Product launches and announcements
+- `competitor-alternatives` - Competitor comparison pages
+
+**Integration Method**: Git subtree - allows pulling upstream updates from Corey's original repo
+
+**Updating from upstream**:
+```bash
+cd ~/git/skills
+git subtree pull --prefix=skills-external/marketingskills https://github.com/coreyhaines31/marketingskills.git main --squash
+cp -r skills-external/marketingskills/skills/* skills/
+git add skills/
+git commit -m "feat: update marketing skills from upstream"
+```
+
+**Appreciation**: Huge thanks to Corey Haines for creating these practical, battle-tested marketing skills. If you use these for revenue-generating work, consider supporting Corey at https://conversionfactory.co
+
+---
+
 ## Original Skills (MIT License)
 
 **Author**: Jamie Oarton

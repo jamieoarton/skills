@@ -4,24 +4,33 @@ Personal productivity and automation skills for Claude Code and other AI systems
 
 ## Overview
 
-This plugin provides **34 skills** across four categories:
+This plugin provides **63 skills** across five categories:
 
-**Workflow & Collaboration** (Superpowers)
+**Workflow & Collaboration** (15 - Superpowers)
 - Test-driven development, systematic debugging, code review
 - Planning, execution, and parallel agent coordination
 - Git workflows and branch management
 
-**Business Systems** (Work The System methodology)
+**Marketing & Growth** (29 - Corey Haines)
+- Conversion optimization (CRO), copywriting, email marketing
+- SEO, programmatic content, paid advertising
+- Pricing strategy, launch planning, referral programs
+- Marketing psychology, analytics, A/B testing
+
+**Business Systems** (5 - Work The System methodology)
 - Process documentation and systems thinking
 - Strategic planning and operating principles
 
-**BramClaw MCP Integrations**
+**BramClaw MCP Integrations** (6)
 - ClickUp, Gmail, Obsidian, Supabase, GitHub automation
 - Delegated operations and multi-account support
 
-**Development Tools**
+**Development Tools** (7)
 - Agent creation and skill building frameworks
 - Cursor IDE utilities
+
+**Examples** (1)
+- Reference implementations
 
 See [CREDITS.md](CREDITS.md) for attribution and sources.
 
