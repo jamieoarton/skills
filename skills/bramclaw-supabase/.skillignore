@@ -1,0 +1,33 @@
+# Skill packaging ignore file
+# Prevents sensitive and unnecessary files from being included in packaged .skill file
+
+# Service account credentials (SENSITIVE)
+*.json
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python virtual environments
+venv/
+env/
+ENV/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Development
+.env
+*.log

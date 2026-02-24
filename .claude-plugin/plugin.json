@@ -1,0 +1,22 @@
+{
+  "name": "jamie-skills",
+  "version": "1.0.0",
+  "description": "Personal productivity and automation skills including Work The System methodology, BramClaw MCP integrations, and skill development tools",
+  "author": {
+    "name": "Jamie Oarton",
+    "email": "jamie@bramforth.ai",
+    "url": "https://github.com/jamieoarton"
+  },
+  "homepage": "https://github.com/jamieoarton/skills",
+  "repository": "https://github.com/jamieoarton/skills",
+  "license": "MIT",
+  "keywords": [
+    "productivity",
+    "automation",
+    "mcp",
+    "bramclaw",
+    "work-the-system",
+    "business-systems",
+    "skill-development"
+  ]
+}

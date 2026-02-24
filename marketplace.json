@@ -1,0 +1,16 @@
+{
+  "name": "jamieoarton",
+  "owner": {
+    "name": "Jamie Oarton",
+    "email": "jamie@bramforth.ai"
+  },
+  "plugins": [
+    {
+      "name": "jamie-skills",
+      "source": {
+        "source": "github",
+        "repo": "jamieoarton/skills"
+      }
+    }
+  ]
+}
