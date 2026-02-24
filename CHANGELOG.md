@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-02-24
+
+### Changed
+
+**Separated Work The System skills into dedicated plugin**
+
+Split `jamie-skills-business` into two focused plugins:
+
+- **jamie-skills-wts** (4 skills) - Work The System methodology
+  - `work-the-system-mindset`
+  - `strategic-objective-creation`
+  - `operating-principles-development`
+  - `working-procedures-documentation`
+
+- **jamie-skills-utilities** (1 skill) - General utilities
+  - `fetch-youtube-transcript`
+
+**Benefits**:
+- Install WTS methodology separately if you want that specific framework
+- Clearer separation of concerns
+- Better plugin naming (utilities vs business systems)
+
+**Total plugins**: 6 → 7 (jamie-skills-business split into jamie-skills-wts + jamie-skills-utilities)
+
+---
+
 ## [2.0.0] - 2026-02-24
 
 ### Changed

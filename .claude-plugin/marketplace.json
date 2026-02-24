@@ -5,8 +5,8 @@
     "email": "jamie@bramforth.ai"
   },
   "metadata": {
-    "description": "Curated skills collection with upstream integration: Superpowers workflows, Marketing & Growth, BramClaw MCP, Business systems, and Development tools",
-    "version": "2.0.0"
+    "description": "Curated skills collection with upstream integration: Superpowers workflows, Marketing & Growth, BramClaw MCP, Work The System, Utilities, and Development tools",
+    "version": "2.1.0"
   },
   "plugins": [
     {
@@ -83,16 +83,24 @@
       ]
     },
     {
-      "name": "jamie-skills-business",
-      "description": "Business systems: Work The System methodology, strategic planning, operating principles, process documentation (5 skills)",
+      "name": "jamie-skills-wts",
+      "description": "Work The System methodology: Systems thinking, strategic planning, operating principles, process documentation (4 skills)",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/fetch-youtube-transcript",
         "./skills/operating-principles-development",
         "./skills/strategic-objective-creation",
         "./skills/work-the-system-mindset",
         "./skills/working-procedures-documentation"
+      ]
+    },
+    {
+      "name": "jamie-skills-utilities",
+      "description": "General utilities: YouTube transcript extraction and other helpful tools (1 skill)",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/fetch-youtube-transcript"
       ]
     },
     {

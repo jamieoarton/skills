@@ -4,7 +4,7 @@ Personal productivity and automation skills for Claude Code and other AI systems
 
 ## Overview
 
-This marketplace provides **63 skills** organized into **6 modular plugins**. Install only what you need, or install all for the complete toolkit.
+This marketplace provides **63 skills** organized into **7 modular plugins**. Install only what you need, or install all for the complete toolkit.
 
 ### Available Plugins
 
@@ -23,9 +23,12 @@ This marketplace provides **63 skills** organized into **6 modular plugins**. In
 - ClickUp, Gmail, Obsidian, Supabase, GitHub automation
 - Delegated operations and multi-account support
 
-**jamie-skills-business** (5 skills - Work The System methodology)
-- Process documentation and systems thinking
+**jamie-skills-wts** (4 skills - Work The System methodology)
+- Systems thinking and process documentation
 - Strategic planning and operating principles
+
+**jamie-skills-utilities** (1 skill)
+- General utilities: YouTube transcript extraction
 
 **jamie-skills-dev-tools** (8 skills)
 - Agent creation and skill building frameworks
@@ -56,8 +59,11 @@ See [CREDITS.md](CREDITS.md) for attribution and sources.
 # BramClaw MCP Integrations (6 skills)
 /plugin install jamie-skills-bramclaw@jamieoarton
 
-# Business Systems (5 skills)
-/plugin install jamie-skills-business@jamieoarton
+# Work The System Methodology (4 skills)
+/plugin install jamie-skills-wts@jamieoarton
+
+# Utilities (1 skill)
+/plugin install jamie-skills-utilities@jamieoarton
 
 # Development Tools (8 skills)
 /plugin install jamie-skills-dev-tools@jamieoarton
@@ -71,7 +77,8 @@ See [CREDITS.md](CREDITS.md) for attribution and sources.
 /plugin install jamie-skills-superpowers@jamieoarton && \
   /plugin install jamie-skills-marketing@jamieoarton && \
   /plugin install jamie-skills-bramclaw@jamieoarton && \
-  /plugin install jamie-skills-business@jamieoarton && \
+  /plugin install jamie-skills-wts@jamieoarton && \
+  /plugin install jamie-skills-utilities@jamieoarton && \
   /plugin install jamie-skills-dev-tools@jamieoarton
 ```
 
@@ -165,9 +172,12 @@ Skills are automatically namespaced by plugin name:
 /jamie-skills-bramclaw:bramclaw-clickup
 /jamie-skills-bramclaw:bramclaw-gmail
 
-# Business skills
-/jamie-skills-business:strategic-objective-creation
-/jamie-skills-business:fetch-youtube-transcript
+# Work The System skills
+/jamie-skills-wts:strategic-objective-creation
+/jamie-skills-wts:work-the-system-mindset
+
+# Utilities
+/jamie-skills-utilities:fetch-youtube-transcript
 
 # Dev Tools skills
 /jamie-skills-dev-tools:skill-building-complete
@@ -200,12 +210,14 @@ Force update specific plugins:
 /plugin update jamie-skills-superpowers@jamieoarton
 /plugin update jamie-skills-marketing@jamieoarton
 /plugin update jamie-skills-bramclaw@jamieoarton
+/plugin update jamie-skills-wts@jamieoarton
 
 # Or update all at once
 /plugin update jamie-skills-superpowers@jamieoarton && \
   /plugin update jamie-skills-marketing@jamieoarton && \
   /plugin update jamie-skills-bramclaw@jamieoarton && \
-  /plugin update jamie-skills-business@jamieoarton && \
+  /plugin update jamie-skills-wts@jamieoarton && \
+  /plugin update jamie-skills-utilities@jamieoarton && \
   /plugin update jamie-skills-dev-tools@jamieoarton
 ```
 
