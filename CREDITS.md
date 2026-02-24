@@ -9,9 +9,9 @@ This repository contains skills from multiple sources. We are grateful to all co
 **Source**: https://github.com/obra/superpowers
 **Author**: Jesse Vincent (@obra)
 **License**: MIT
-**Date Copied**: 2026-02-24
+**Date Integrated**: 2026-02-24 (via git subtree)
 
-The following skills are copied from the Superpowers project:
+The following 14 skills are integrated from the Superpowers project:
 
 ### Testing & Quality
 - `test-driven-development` - TDD methodology for implementation
@@ -36,7 +36,17 @@ The following skills are copied from the Superpowers project:
 ### Meta-Skills
 - `using-superpowers` - Introduction to skill usage
 - `writing-skills` - Skill creation methodology
-- `skill-creator` - Skill building toolkit
+
+**Integration Method**: Git subtree - allows pulling upstream updates from Jesse's repo
+
+**Updating from upstream**:
+```bash
+cd ~/git/skills
+git subtree pull --prefix=skills-external/superpowers https://github.com/obra/superpowers.git main --squash
+cp -r skills-external/superpowers/skills/* skills/
+git add skills/
+git commit -m "feat: update superpowers skills from upstream"
+```
 
 **Appreciation**: We are deeply grateful to Jesse Vincent for creating these excellent workflow patterns. The Superpowers project has significantly influenced how we think about agentic collaboration.
 

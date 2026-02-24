@@ -74,30 +74,33 @@ git push
 ## Superpowers Skills (Jesse Vincent)
 
 **Upstream**: https://github.com/obra/superpowers
-**Method**: Manual copy (not subtree)
-**Last Updated**: 2026-02-24
+**Subtree Path**: `skills-external/superpowers/`
 
-### Update Process
+### Update Process (Recommended: Pull Directly from Upstream)
+
+**Best Practice**: Pull directly from Jesse's original repo to always get the latest:
 
 ```bash
-cd /tmp
-git clone https://github.com/obra/superpowers.git
-
-# Compare what changed
-diff -r superpowers/skills ~/git/skills/skills
-
-# Manually review and copy updated skills
-cp superpowers/skills/test-driven-development/SKILL.md \
-   ~/git/skills/skills/test-driven-development/
-
-# Commit
 cd ~/git/skills
+
+# 1. Pull latest from upstream into subtree
+git subtree pull --prefix=skills-external/superpowers \
+  https://github.com/obra/superpowers.git main --squash
+
+# 2. Copy updated skills to main skills directory
+cp -r skills-external/superpowers/skills/* skills/
+
+# 3. Stage and commit
 git add skills/
 git commit -m "feat: update superpowers skills from upstream"
-git push
+
+# 4. Push to your unified repo
+git push origin main
 ```
 
-**Note**: Not using subtree because Superpowers skills were copied early and we may customize them significantly.
+**Result**: Updated Superpowers skills propagate to all AI systems via symlinks
+
+**Why This Approach**: Jesse actively maintains Superpowers with significant improvements (e.g., brainstorming skill now has hard gates, checklists, and process flows).
 
 ---
 
@@ -115,9 +118,9 @@ git log --since="2026-02-24" --oneline
 # https://github.com/coreyhaines31/marketingskills/commits/main
 ```
 
-**Superpowers**:
+**Superpowers** (check upstream directly):
 ```bash
-# Clone and manually check
+# Check for new commits in Jesse's original repo
 cd /tmp
 git clone https://github.com/obra/superpowers.git
 cd superpowers
@@ -140,16 +143,26 @@ git log --since="2026-02-24" --oneline
 
 ### Common Commands
 
-**Initial add** (already done):
+**Initial add** (already done for both):
 ```bash
+# Marketing skills
 git subtree add --prefix=skills-external/marketingskills \
   https://github.com/jamieoarton/marketingskills.git main --squash
+
+# Superpowers skills
+git subtree add --prefix=skills-external/superpowers \
+  https://github.com/obra/superpowers.git main --squash
 ```
 
 **Pull updates**:
 ```bash
+# Marketing skills
 git subtree pull --prefix=skills-external/marketingskills \
-  https://github.com/jamieoarton/marketingskills.git main --squash
+  https://github.com/coreyhaines31/marketingskills.git main --squash
+
+# Superpowers skills
+git subtree pull --prefix=skills-external/superpowers \
+  https://github.com/obra/superpowers.git main --squash
 ```
 
 **Check subtree history**:
@@ -174,14 +187,15 @@ git log --all --graph --decorate --oneline --simplify-by-decoration \
 
 **Your fork** (`jamieoarton/marketingskills`) is a static snapshot - only update it if you're customizing the skills.
 
-### For Superpowers Skills (As Needed)
+### For Superpowers Skills (Recommended: Direct from Upstream)
 
-**Every 3-6 months** or when major improvements released:
+**Every 1-2 months** or when Jesse releases updates:
 
-1. Clone upstream
-2. Manually review changes
-3. Copy updated skills
+1. Check for updates in upstream: https://github.com/obra/superpowers/commits/main
+2. Pull directly from upstream: `git subtree pull --prefix=skills-external/superpowers https://github.com/obra/superpowers.git main --squash`
+3. Copy to main skills: `cp -r skills-external/superpowers/skills/* skills/`
 4. Commit and push
+5. **Result**: All machines and AI systems get updates automatically
 
 ---
 
@@ -244,5 +258,5 @@ When pulling updates, maintain attribution in CREDITS.md:
 ---
 
 **Last Updated**: 2026-02-24
-**Marketing Skills Version**: Initial integration
-**Superpowers Version**: 2026-02-24 snapshot
+**Marketing Skills**: Integrated via git subtree (2026-02-24)
+**Superpowers Skills**: Integrated via git subtree (2026-02-24)
