@@ -7,10 +7,12 @@ This repository uses **git subtree** to integrate external skill repositories wh
 ## Marketing Skills (Corey Haines)
 
 **Upstream**: https://github.com/coreyhaines31/marketingskills
-**Your Fork**: https://github.com/jamieoarton/marketingskills
+**Your Fork**: https://github.com/jamieoarton/marketingskills (static snapshot)
 **Subtree Path**: `skills-external/marketingskills/`
 
-### Update Process
+### Update Process (Recommended: Pull Directly from Upstream)
+
+**Best Practice**: Pull directly from Corey's original repo to always get the latest:
 
 ```bash
 cd ~/git/skills
@@ -32,21 +34,32 @@ git push origin main
 
 **Result**: Updated marketing skills propagate to all AI systems via symlinks
 
+**Why This Approach**: Simpler workflow, fewer steps, always current.
+
 ---
 
-## Updating Your Fork First (Optional)
+## Alternative: Update Via Your Fork (Only If You Need Customization)
 
-If you want to sync your fork before pulling into unified repo:
+**Use this approach ONLY if you need to**:
+- Customize marketing skills before using them
+- Test upstream changes in isolation before pulling
+- Maintain a modified version with your own additions
+
+**Note**: Your fork is a snapshot - it doesn't automatically sync with upstream.
 
 ```bash
-# Update your fork
-cd ~/git/marketingskills  # or clone if needed
+# Step 1: Update your fork (one-time remote setup)
+cd /tmp
+git clone https://github.com/jamieoarton/marketingskills.git
+cd marketingskills
 git remote add upstream https://github.com/coreyhaines31/marketingskills.git
+
+# Step 2: Pull upstream changes and push to your fork
 git fetch upstream
 git merge upstream/main
 git push origin main
 
-# Then pull into unified repo
+# Step 3: Pull from your fork into unified repo
 cd ~/git/skills
 git subtree pull --prefix=skills-external/marketingskills \
   https://github.com/jamieoarton/marketingskills.git main --squash
@@ -90,16 +103,16 @@ git push
 
 ## Checking for Updates
 
-**Marketing Skills**:
+**Marketing Skills** (check upstream directly):
 ```bash
-# Check your fork for updates
-cd ~/git/marketingskills
-git fetch origin
-git log HEAD..origin/main --oneline
+# Check for new commits in Corey's original repo
+cd /tmp
+git clone https://github.com/coreyhaines31/marketingskills.git
+cd marketingskills
+git log --since="2026-02-24" --oneline
 
-# Check upstream for updates
-git fetch upstream
-git log HEAD..upstream/main --oneline
+# Or use GitHub web interface
+# https://github.com/coreyhaines31/marketingskills/commits/main
 ```
 
 **Superpowers**:
@@ -109,6 +122,9 @@ cd /tmp
 git clone https://github.com/obra/superpowers.git
 cd superpowers
 git log --since="2026-02-24" --oneline
+
+# Or use GitHub web interface
+# https://github.com/obra/superpowers/commits/main
 ```
 
 ---
@@ -146,15 +162,17 @@ git log --all --graph --decorate --oneline --simplify-by-decoration \
 
 ## Workflow Summary
 
-### For Marketing Skills (Recommended)
+### For Marketing Skills (Recommended: Direct from Upstream)
 
 **Every 1-2 months** or when Corey releases updates:
 
-1. Check for updates in upstream (coreyhaines31/marketingskills)
-2. Pull into subtree: `git subtree pull ...`
+1. Check for updates in upstream: https://github.com/coreyhaines31/marketingskills/commits/main
+2. Pull directly from upstream: `git subtree pull --prefix=skills-external/marketingskills https://github.com/coreyhaines31/marketingskills.git main --squash`
 3. Copy to main skills: `cp -r skills-external/marketingskills/skills/* skills/`
 4. Commit and push
 5. **Result**: All machines and AI systems get updates automatically
+
+**Your fork** (`jamieoarton/marketingskills`) is a static snapshot - only update it if you're customizing the skills.
 
 ### For Superpowers Skills (As Needed)
 
