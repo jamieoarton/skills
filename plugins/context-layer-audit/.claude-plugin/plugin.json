@@ -1,0 +1,16 @@
+{
+  "name": "context-layer-audit",
+  "description": "Audit where your organisation's knowledge lives. Scored, benchmarked report with prioritised action plan.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jamie Oarton",
+    "email": "jamie@bramforth.ai",
+    "url": "https://jamieoarton.com"
+  },
+  "homepage": "https://jamieoarton.com",
+  "repository": "https://github.com/jamieoarton/skills",
+  "license": "MIT",
+  "skills": [
+    "./skills/context-layer-audit"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "content-engine",
+  "description": "Turn one voice-note transcript into a week of content. Four skills: linkedin, short-video, long-video, newsletter.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jamie Oarton",
+    "email": "jamie@bramforth.ai",
+    "url": "https://jamieoarton.com"
+  },
+  "homepage": "https://jamieoarton.com",
+  "repository": "https://github.com/jamieoarton/skills",
+  "license": "MIT",
+  "keywords": ["content", "linkedin", "tiktok", "youtube", "newsletter", "repurposing"],
+  "skills": [
+    "./skills/linkedin",
+    "./skills/short-video",
+    "./skills/long-video",
+    "./skills/newsletter"
+  ]
+}

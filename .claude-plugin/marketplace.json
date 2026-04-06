@@ -1,0 +1,27 @@
+{
+  "name": "jamieoarton-skills",
+  "owner": {
+    "name": "Jamie Oarton",
+    "email": "jamie@bramforth.ai"
+  },
+  "metadata": {
+    "description": "Free Claude skills for business owners, consultants, and AI strategy by Jamie Oarton",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "content-engine",
+      "source": "./plugins/content-engine",
+      "description": "Turn one voice-note transcript into a week of content. Four skills: linkedin, short-video, long-video, newsletter.",
+      "category": "content",
+      "keywords": ["content", "linkedin", "tiktok", "youtube", "newsletter", "repurposing"]
+    },
+    {
+      "name": "context-layer-audit",
+      "source": "./plugins/context-layer-audit",
+      "description": "Audit where your organisation's knowledge lives. Scored, benchmarked report with prioritised action plan.",
+      "category": "strategy",
+      "keywords": ["knowledge-management", "audit", "onboarding", "context"]
+    }
+  ]
+}
